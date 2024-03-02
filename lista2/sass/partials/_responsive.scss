@@ -1,0 +1,19 @@
+// media queries
+
+@media only screen and (min-width: 768px) {
+	li.img-descriptive-left {
+		flex-direction: row;
+	}
+	li.img-descriptive-right {
+		flex-direction: row-reverse;
+	}
+	.pc-img {
+		display: block;
+	}
+	img.self-picture {
+		top: 4em;
+		right: 1em;
+		float: right;
+		width: 10%;
+	}
+}

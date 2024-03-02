@@ -1,0 +1,75 @@
+/* headers */
+
+header {
+	text-align: center;
+	margin-top: 12em;
+	@include mq(desktop) {
+		margin-top: 8em;
+	}
+}
+
+%title-like {
+	margin: auto;
+	width: fit-content;
+	text-align: center;
+}
+
+h1 {
+	@extend %title-like;
+	font-family: monospace;
+	font-size: 2.5em;
+}
+
+h2 {
+	@extend %title-like;
+	//text-align: center;
+	//margin: auto;
+	@include margin-v(4em);
+	&.elegant {
+		font-family: 'Brush Script MT', cursive;
+		font-size: 2em;
+	}
+}
+
+h3 {
+	@extend %title-like;
+	border-top: $primary-border; /*dashed*/
+	border-bottom: $primary-border;
+	min-width: 20%;
+	@include margin-v(2em);
+	@include padding-v(0.2em);
+	@include padding-h(0);
+}
+
+/* paragraphs */
+
+p {
+	text-align: justify;
+	&.big-font {
+		font-size: 1.2em;
+	}
+	&.p-title {
+		@extend %title-like;
+		text-decoration: underline;
+	}
+}
+
+.img-description {
+	font-size: 1.05rem;
+	padding: 2em;
+	border: 5px ridge #4AF626;
+}
+
+.sub-title {
+	@extend %title-like;
+	color: #838383;
+	border-bottom: 1px solid #838383;
+	margin-top: 1em;
+}
+
+.terminal-text {
+	font-family: monospace;
+	font-size: 1.5em;
+	text-align: left;
+	color: #4AF626;
+}

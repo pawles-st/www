@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Paweł Leśniak &mdash; Projekty</title>
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body id="top">
+		<nav>
+			<ul class="navigation" id="navlist">
+				<li class="navigation">
+					<a href="index.html">STRONA GŁÓWNA</a>
+				</li>
+				<li class="active navigation">
+					<a href="projects.html">PROJEKTY</a>
+				</li>
+				<li class="navigation">
+					<a href="interests.html">INNE ZAJĘCIA</a>
+				</li>
+				<li class="navigation">
+					<a href="about.html">O MNIE</a>
+				</li>
+				<li class="navigation">
+					<a href="contact.html">KONTAKT</a>
+				</li>
+				<li class="navigation icon" id="menu-button">
+					<a href="javascript:void(0);">
+						<i class="fa fa-bars"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<header>
+			<h1>$ git log -p</h1>
+		</header>
+		<main class="in-body">
+			<article>
+				<h2 style="text-decoration: underline">ARCHIWUM</h2>
+				<section>
+					<h3>
+						LINKI
+					</h3>
+					<p> <span class="terminal-text">[user@user-web ~/projects]$</span> Kilka ciekawych linków, prowadzących do innych moich kreacji (nie tylko programistycznych):</p>
+					<ul>
+						<li>
+							<a href="https://pawles22.itch.io/">itch.io</a>
+						</li>
+						<li>
+							<a href="https://pawles22.newgrounds.com/">newgrounds,com</a>
+						</li>
+						<li>
+							<a href="https://github.com/pawles-st">github.com</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>
+						PROJEKTY INFORMATYCZNE
+					</h3>
+					<p><span class="terminal-text">[user@user-web ~/projects]$</span> Poniżej znajdują się skrótowe opisy wszystkich najważniejszych aplikacji, zrealizowanych samodzielnie lub z pomocą innej osoby. Projekty nieinformatyczne można znaleźć, klikając w jeden z linków powyżej.</p>
+					<ul>
+						<li class="img-descriptive-left">
+							<section class="img-description">
+								<h4 class="p-title">Warcaby</h4>
+								<p><a href=https://github.com/pawles-st/checkers>Link</a>. Aplikacja napisana w Javie w architekturze klient-serwer, z zachowaniem zasad GRASP, pozwalająca dwóm graczom stoczyć potyczkę w warcabach. Ewentualnie, pojedynczy gracz może spróbować swoich sił przeciwko komputerowi. Najciekawszy fragent kodu jest widoczny poniżej &mdash; wykozystanie wzorca Singleton do oszczędności pamięci planszy:</p>
+								<pre><code>for (int y = 0; y &lt; height; ++y) {
+	final ArrayList&lt;Square&gt;row = new ArrayList&lt;&gt;();
+	for (int x = 0; x &lt; width; ++x) {
+		row.add(new Square(x, y));
+	}
+	SQUARES.add(row);
+}</code></pre>
+							</section>
+							<figure>
+								<img id="img1" lazysrc="images/checkers.png" alt="checkers game board">
+							</figure>
+						</li>
+						<li class="img-descriptive-right">
+							<section class="img-description">
+								<h4 class="p-title">Biblioteka</h4>
+								<p>Szkielet aplikacji bazodanowej, która umożliwia zarówno pracownikom jak i klientom korzystanie z usług bibliteki elektronicznej (tj. przeglądać książki, czytać je, filtrować po wybranych kryteriach, ale też i edytować stan magazynu pracownikom). Celem tego projektu było stworzenie własnej bazy i aplikacji jej obsługujących</p>
+							</section>
+							<figure>
+								<img id="img2" lazysrc="images/library.png" alt="library application interface">
+							</figure>
+						</li>
+						<li class="img-descriptive-left">
+							<section class="img-description">
+								<h4 class="p-title">Pac-man</h4>
+								<p>Prosta aplikacja napisana w Bashu, dzięki której użytkownik może zagrać w minimalistyczną wersję gry Pac-man. Głównym celem projektu było opanowanie "escape sequences" w terminalu na linuksie.</p>
+							</section>
+							<figure>
+								<img id="img3" lazysrc="images/pacman.png" alt="pacman game begin">
+							</figure>
+							<figure class="pc-img">
+								<img id="img4" lazysrc="images/pacman2.png" alt="pacman game middle">
+							</figure>
+						</li>
+						<li class="img-descriptive-right">
+							<section class="img-description">
+								<h4 class="p-title">Błądzenie losowe po liczbach całkowitych</h4>
+								<p>Program numerycznie wyznacza rozkład procentu czasu spędzonego nad osią OX podczas błądzenia losowego dyskretnego. Na wykresie widać porównanie otrzymanego rozkładu z rozkładem arcusa sinusa.</p>
+							</section>
+							<figure>
+								<img id="img5" lazysrc="images/arcsine.png" alt="arcsine distribution comparison graph">
+							</figure>
+						</li>
+						<li class="img-descriptive-left">
+							<section class="img-description">
+								<h4 class="p-title">Mastermind</h4>
+								<p>Gracz wymyśla kod złożony z 4 liczb, a komputer odgaduje hasło na podstawie pytań oraz odpowiedzi. Program napisany w języku C</p>
+							</section>
+							<figure class="pc-img">
+								<img id="img6" lazysrc="images/mastermind2.png" alt="mastermind cheating result">
+							</figure>
+							<figure>
+								<img id="img7" lazysrc="images/mastermind.png" alt="mastermind winning result">
+							</figure>
+						</li>
+					</ul>
+				</section>
+			</article>
+		</main>
+		<div class="top-button">
+			<p>
+				<a href="#top">powrót na górę</a>
+			</p>
+		</div>
+		<script src="js/nav.js"></script>
+		<script src="js/img_loader.js"></script>
+		<noscript>
+			<style>
+				ul.navigation {
+					all: unset;
+				  display: flex;
+				  flex-direction: column;
+				  align-items: center;
+				  list-style-type: none;
+				  margin: 0;
+				  padding: 0;
+				  width: 100%;
+				  border-bottom: 3px solid #D226F6;
+				}
+				@media only screen and (max-width: 768px) {
+				  ul.navigation li:not(:last-child) {
+					display: none;
+				  }
+				  ul.navigation.shown li {
+					display: block;
+				  }
+				}
+
+				li.navigation a {
+					margin: auto;
+				}
+				li.navigation {
+				  display: unset;
+				  padding-top: 0.5em;
+				  padding-bottom: 0.5em;
+				  padding-left: 0.5em;
+				  padding-right: 0.5em;
+				  width: 100%;
+				}
+				@media only screen and (min-width: 768px) {
+				  li.navigation {
+					display: block;
+					width: fit-content;
+					padding-top: 1em;
+					padding-bottom: 1em;
+				  }
+				  li.navigation.icon {
+					display: none;
+				  }
+				}
+
+				li a {
+				  padding-top: 0em;
+				  padding-bottom: 0em;
+				  padding-left: 0.5em;
+				  padding-right: 0.5em;
+				}
+				li a:visited {
+				  color: #FFFFFF;
+				  text-align: center;
+				}
+				ul.navigation.shown {
+					display: unset;
+				}
+				ul.navigation {
+					display: flex;
+					flex-direction: column;
+				}
+				@media only screen and (min-width: 768px) {
+				  ul.navigation {
+					flex-direction: row;
+					padding-left: 50%;
+				  }
+				}
+				ul.navigation li:not(:last-child) {
+					display: flex;
+				}
+			</style>
+		<noscript>
+	</body>
+</html>

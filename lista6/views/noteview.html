@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Notatki</title>
+</head>
+<body>
+	<h1>Wspólne notatki użytkowników</h1>
+	<h2>Dodaj nową notatkę:</h2>
+	<form action="/note" method="POST">
+		<label for="author">Author:</label>
+		<input type="text" id="author" name="author"><br>
+		<label for="text">Text:</label>
+		<input type="text" id="text" name="text"><br>
+		<input type="submit" value="submit">
+	</form>
+	<% noteList.forEach(note => { %>
+		<div>
+			<label for="author">Author:</label>
+			<input type="text" id="author<%= note.id %>" name="author" value="<%= note.author %>"><br>
+			<label for="text">Text:</label>
+			<input type="text" id="text<%= note.id %>" name="text" value="<%= note.text %>"><br>
+			<input type="submit" value="edit">
+		</div>
+	<% }); %>
+</body>
+</html>

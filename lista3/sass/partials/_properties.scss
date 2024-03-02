@@ -1,0 +1,25 @@
+/* blocks */
+
+.pane {
+	background-color: $block-colour;
+	@include padding-h(5%);
+	border: $primary-border;
+}
+
+/* additional margin */
+
+.margin-top {
+	margin-top: 8em;
+}
+
+/* buttons */
+
+.top-button {
+	background-color: #9F08BF;
+	width: fit-content;
+	border: 1px solid #AF18CF;
+	margin: 0 -12px -12px;
+	margin-left: auto;
+	@include padding-v(0);
+	@include padding-h(12px);
+}

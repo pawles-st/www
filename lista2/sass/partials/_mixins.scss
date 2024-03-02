@@ -1,0 +1,37 @@
+/// MIXINS ///
+
+@mixin padding-h($value) {
+	padding: {
+		left: $value;
+		right: $value;
+	}
+}
+
+@mixin padding-v($value) {
+	padding: {
+		top: $value;
+		bottom: $value;
+	}
+}
+
+@mixin margin-h($value) {
+	margin: {
+		left: $value;
+		right: $value;
+	}
+}
+
+@mixin margin-v($value) {
+	margin: {
+		top: $value;
+		bottom: $value;
+	}
+}
+
+@mixin mq($canvas) {
+	@if map-has-key($breakpoints, $canvas) {
+		@media only screen and (min-width: map-get($breakpoints, $canvas)) {
+			@content;
+		}
+	}
+}

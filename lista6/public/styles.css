@@ -1,0 +1,73 @@
+* {
+	box-sizing: border-box;
+}
+
+.note {
+	min-width: 30%;
+	width: fit-content;
+	line-height: 2em;
+	border: 2px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	padding: 2em;
+	background-color: #FAF0C8;
+}
+
+@media screen and (min-width: 720px) {
+	.note-grid {
+		padding: 0 12.5%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 20px;
+	}
+
+	.note-grid .note {
+		min-width: 75%;
+	}
+}
+
+.note-text {
+	color: black;
+}
+
+.login {
+	min-width: fit-content;
+	line-height: 2em;
+	width: 65%;
+	border: 2px solid black;
+	margin: auto;
+	padding: 2em;
+	background-color: #FAC8C8;
+}
+
+input {
+	width: 100%;
+}
+
+textarea {
+	width: 100%;
+}
+
+.header {
+	text-align: center;
+}
+
+input.text {
+	width: 100%;
+}
+
+label[for~="text"] {
+	margin: 2em 0;
+}
+
+input.author {
+	width: 75%;
+	margin-left: 1em;
+}
+
+button.submit {
+	width: 50%;
+	margin: 0 25%;
+}

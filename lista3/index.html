@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Paweł Leśniak &mdash; Informatyk & Programista</title>
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body id="top">
+		<nav>
+			<ul class="navigation" id="navlist">
+				<li class="active navigation">
+					<a href="index.html">STRONA GŁÓWNA</a>
+				</li>
+				<li class="navigation">
+					<a href="projects.html">PROJEKTY</a>
+				</li>
+				<li class="navigation">
+					<a href="interests.html">INNE ZAJĘCIA</a>
+				</li>
+				<li class="navigation">
+					<a href="about.html">O MNIE</a>
+				</li>
+				<li class="navigation">
+					<a href="contact.html">KONTAKT</a>
+				</li>
+				<li class="navigation icon" id="menu-button">
+					<a href="javascript:void(0);">
+						<i class="fa fa-bars"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!--figure>
+			<img src="images/red-black-tree.jpg" alt="red-black tree">
+		</figure-->
+		<header>
+			<h1>login: Paweł Leśniak</h1>
+			<h1>password: ********</h1>
+			<p class="sub-title">INFORMATYK &amp; PROGRAMISTA</p>
+		</header>
+		<main class="in-body">
+			<article>
+				<h2 class="elegant">WSZYSTKO CO TEORETYCZNE</h2>
+				<section>
+					<h3>
+						KIM JESTEM?
+					</h3>
+					<p> <span class="terminal-text">[user@user-web ~]$</span> Jestem studentem na Politechnice Wrocławskiej. Aktualnie studiuję równolegle dwa kierunki na I stopniu &mdash; Informatykę Algorytmiczną oraz Matematykę. Interesuje mnie wszystko, pod warunkiem że jest wystarczająco teoretyczne lub kreatywne; programowanie firmowe nie jest dla mnie. Lubię realizować projekty programistyczne, które wymagają przemyślenia (optymalizacja algorytmu, uogólnianie problemu), zamiast wielogodzinnej walki z kompilatorem. W przeszłości zajmowałem się głównie rzeczami takimi jak: tworzenie muzyki, design gier komputerowych i pisarstwo. Aktualnie całą swoją uwagę skupiam na studiach &mdash; poszerzam wiedzę w zakresie wyżej wymieniowych dziedzin.</p>
+				</section>
+				<section>
+					<h3>
+						CZYM SIĘ ZAJMUJĘ?
+					</h3>
+					<p><span class="terminal-text">[user@user-web ~]$</span> Moje zainteresowania dotyczą głównie matematyki teoretycznej oraz algorytmiki. Moje główne zainteresowania w zakresie matematyki dotyczą przede wszykim: teorii mnogości i jej pochodnych, algebry abstrakcyjnej, teorii grafów; natomiast najciekawsze dziedziny informatyczne według mnie to: teoria algorytmów (w tym optymalizacja), teoria baz danych, a także sztuczna inteligencja. Głównie programuje w językach programowania niższego poziomu, np. C++, Rust. Niemniej jednak w razie potrzeby piszę programy w Pythonie, Javie, lub mniejszych językach, np. Lua. W nieco mniejszym stopniu interesuję się także innymi dziedzinami, np. fizyką. Dodatkowo, w wolnym czasie lubię uczyć się nowych języków (znam język angielsi na poziomie C1, francuski na poziomie A2, oraz japoński na poziomie A1).</p>
+				</section>
+				<section>
+					<h3>
+						PLANY
+					</h3>
+					<p><span class="terminal-text">[user@user-web ~]$</span> Obecnie posiadam duży nakład pracy na studiach i nie zamierzam podejmować dodatkowych działalności. Na ten moment planuję skupić się na nauce; W najbliższych latach chciałbym poznać o wiele więcej technik algorytmicznych oraz opanować podstawy matematyki teoretycznej, potrzebnej do nieco bardziej złożonej analizy algorytmów. Oprócz kursów czysto studenckich chciałbym dogłębniej poznać np. Rusta. Jeśli nadarzy się okazja, bardzo chętnie przestudiuje języki programowania takie jak Prolog, oraz dziedziny matematyki takie jak teoria grafów, funkcje zespolone, czy topologia ogólna.</p>
+				</section>
+				<section>
+					<h3>
+						UKŁADANKA
+					<h3>
+					<canvas id="canvas"></canvas>
+					<form>
+						<select id="puzzle-size">
+							<option value=3>3</option>
+							<option value=4>4</option>
+							<option value=5>5</option>
+						</select>
+						<!--input type="file" id="puzzle-image" accept="image/*" onchange="puzzleDisplay()"-->
+						<select id="puzzle-image" onchange="puzzleDisplay();">
+							<option value="images/red-black-tree.jpg">drzewo czerwonoczarne 1</option>
+							<option value="images/red-tree.jpg">drzewo czerwonoczarne 2</option>
+							<!--option value="images/red-black-tree.jpg">drzewo czerwonoczarne 3</option-->
+						</select>
+						<button type="button" onclick="puzzleBegin();">Rozpocznij<button>
+					</form>
+				<section>
+			</article>
+		</main>
+		<div class="top-button">
+			<p>
+				<a href="#top">powrót na górę</a>
+			</p>
+		</div>
+		<script src="js/nav.js"></script>
+		<script src="js/puzzle.js"></script>
+		<noscript>
+			<style>
+				ul.navigation {
+					all: unset;
+				  display: flex;
+				  flex-direction: column;
+				  align-items: center;
+				  list-style-type: none;
+				  margin: 0;
+				  padding: 0;
+				  width: 100%;
+				  border-bottom: 3px solid #D226F6;
+				}
+				@media only screen and (max-width: 768px) {
+				  ul.navigation li:not(:last-child) {
+					display: none;
+				  }
+				  ul.navigation.shown li {
+					display: block;
+				  }
+				}
+
+				li.navigation a {
+					margin: auto;
+				}
+				li.navigation {
+				  display: unset;
+				  padding-top: 0.5em;
+				  padding-bottom: 0.5em;
+				  padding-left: 0.5em;
+				  padding-right: 0.5em;
+				  width: 100%;
+				}
+				@media only screen and (min-width: 768px) {
+				  li.navigation {
+					display: block;
+					width: fit-content;
+					padding-top: 1em;
+					padding-bottom: 1em;
+				  }
+				  li.navigation.icon {
+					display: none;
+				  }
+				}
+
+				li a {
+				  padding-top: 0em;
+				  padding-bottom: 0em;
+				  padding-left: 0.5em;
+				  padding-right: 0.5em;
+				}
+				li a:visited {
+				  color: #FFFFFF;
+				  text-align: center;
+				}
+				ul.navigation.shown {
+					display: unset;
+				}
+				ul.navigation {
+					display: flex;
+					flex-direction: column;
+				}
+				@media only screen and (min-width: 768px) {
+				  ul.navigation {
+					flex-direction: row;
+					padding-left: 50%;
+				  }
+				}
+				ul.navigation li:not(:last-child) {
+					display: flex;
+				}
+			</style>
+		<noscript>
+	</body>
+</html>

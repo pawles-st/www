@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Paweł Leśniak &mdash; Projekty</title>
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body id="top">
+		<header>
+			<h1>$ git log -p</h1>
+		</header>
+		<nav>
+			<ul class="navigation">
+				<li class="navigation">
+					<a href="index.html">STRONA GŁÓWNA</a>
+				</li>
+				<li class="active navigation">
+					<a href="projects.html">PROJEKTY</a>
+				</li>
+				<li class="navigation">
+					<a href="interests.html">INNE ZAJĘCIA</a>
+				</li>
+				<li class="navigation">
+					<a href="about.html">O MNIE</a>
+				</li>
+				<li class="navigation">
+					<a href="contact.html">KONTAKT</a>
+				</li>
+			</ul>
+		</nav>
+		<main class="in-body">
+			<article>
+				<h2 style="text-decoration: underline">ARCHIWUM</h2>
+				<section>
+					<h3>
+						LINKI
+					</h3>
+					<p> <span class="terminal-text">[user@user-web ~/projects]$</span> Kilka ciekawych linków, prowadzących do innych moich kreacji (nie tylko programistycznych):</p>
+					<ul>
+						<li>
+							<a href="https://pawles22.itch.io/">itch.io</a>
+						</li>
+						<li>
+							<a href="https://pawles22.newgrounds.com/">newgrounds,com</a>
+						</li>
+						<li>
+							<a href="https://github.com/pawles-st">github.com</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>
+						PROJEKTY INFORMATYCZNE
+					</h3>
+					<p><span class="terminal-text">[user@user-web ~/projects]$</span> Poniżej znajdują się skrótowe opisy wszystkich najważniejszych aplikacji, zrealizowanych samodzielnie lub z pomocą innej osoby. Projekty nieinformatyczne można znaleźć, klikając w jeden z linków powyżej.</p>
+					<ul>
+						<li class="img-descriptive-left">
+							<section class="img-description">
+								<h4 class="p-title">Warcaby</h4>
+								<p><a href=https://github.com/pawles-st/checkers>Link</a>. Aplikacja napisana w Javie w architekturze klient-serwer, z zachowaniem zasad GRASP, pozwalająca dwóm graczom stoczyć potyczkę w warcabach. Ewentualnie, pojedynczy gracz może spróbować swoich sił przeciwko komputerowi. Najciekawszy fragent kodu jest widoczny poniżej &mdash; wykozystanie wzorca Singleton do oszczędności pamięci planszy:</p>
+								<pre><code>for (int y = 0; y &lt; height; ++y) {
+	final ArrayList&lt;Square&gt;row = new ArrayList&lt;&gt;();
+	for (int x = 0; x &lt; width; ++x) {
+		row.add(new Square(x, y));
+	}
+	SQUARES.add(row);
+}</code></pre>
+							</section>
+							<figure>
+								<img src="images/checkers.png" alt="checkers game board">
+							</figure>
+						</li>
+						<li class="img-descriptive-right">
+							<section class="img-description">
+								<h4 class="p-title">Biblioteka</h4>
+								<p>Szkielet aplikacji bazodanowej, która umożliwia zarówno pracownikom jak i klientom korzystanie z usług bibliteki elektronicznej (tj. przeglądać książki, czytać je, filtrować po wybranych kryteriach, ale też i edytować stan magazynu pracownikom). Celem tego projektu było stworzenie własnej bazy i aplikacji jej obsługujących</p>
+							</section>
+							<figure>
+								<img src="images/library.png" alt="library application interface">
+							</figure>
+						</li>
+						<li class="img-descriptive-left">
+							<section class="img-description">
+								<h4 class="p-title">Pac-man</h4>
+								<p>Prosta aplikacja napisana w Bashu, dzięki której użytkownik może zagrać w minimalistyczną wersję gry Pac-man. Głównym celem projektu było opanowanie "escape sequences" w terminalu na linuksie.</p>
+							</section>
+							<figure>
+								<img src="images/pacman.png" alt="pacman game begin">
+							</figure>
+							<figure class="pc-img">
+								<img src="images/pacman2.png" alt="pacman game middle">
+							</figure>
+						</li>
+						<li class="img-descriptive-right">
+							<section class="img-description">
+								<h4 class="p-title">Błądzenie losowe po liczbach całkowitych</h4>
+								<p>Program numerycznie wyznacza rozkład procentu czasu spędzonego nad osią OX podczas błądzenia losowego dyskretnego. Na wykresie widać porównanie otrzymanego rozkładu z rozkładem arcusa sinusa.</p>
+							</section>
+							<figure>
+								<img src="images/arcsine.png" alt="arcsine distribution comparison graph">
+							</figure>
+						</li>
+						<li class="img-descriptive-left">
+							<section class="img-description">
+								<h4 class="p-title">Mastermind</h4>
+								<p>Gracz wymyśla kod złożony z 4 liczb, a komputer odgaduje hasło na podstawie pytań oraz odpowiedzi. Program napisany w języku C</p>
+							</section>
+							<figure class="pc-img">
+								<img src="images/mastermind2.png" alt="mastermind cheating result">
+							</figure>
+							<figure>
+								<img src="images/mastermind.png" alt="mastermind winning result">
+							</figure>
+						</li>
+					</ul>
+				</section>
+			</article>
+		</main>
+		<div class="top-button">
+			<p>
+				<a href="#top">powrót na górę</a>
+			</p>
+		</div>
+	</body>
+</html>

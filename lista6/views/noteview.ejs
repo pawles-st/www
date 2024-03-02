@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Notes</title>
+	<link href="./styles.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+	<h1 class="header">Shared user notes</h1>
+	<h2 class="header">Register:</h2>
+	<div class="login">
+		<label for="email">email</label>
+		<input type="text" id="email-register" name="email"><br>
+		<label for="password">password</label>
+		<input type="password" id="password-register" name="password"><br>
+		<button type="buttion" class="submit" onclick="register()">register</button>
+	</div>
+	<h2 class="header">Log in:</h2>
+	<div class="login">
+		<label for="email">email</label>
+		<input type="text" id="email-login" name="email"><br>
+		<label for="password">password</label>
+		<input type="password" id="password-login" name="password"><br>
+		<button type="button" class="submit" onclick="login()">log in</button>
+	</div>
+	<h2 class="header">Add a note:</h2>
+	<div class="note">
+		<div>
+			<label for="author">Author:</label>
+			<input type="text" class="author" id="author-insert" name="author"><br>
+			<label for="text">Text:</label>
+			<textarea class="text" id="text-insert" name="text">note body...</textarea><br>
+			<button type="button" class="submit" onclick="addNote()">add</button>
+		</div>
+	</div>
+	<h2 class="header">Published notes:</h2>
+	<div id="note-grid" class="note-grid">
+	<% data.forEach(note => { %>
+		<div class="note" id="<%= note._id %>">
+			<label for="author<%= note._id %>">Author:</label>
+			<input type="text" class="author" id="author<%= note._id %>" name="author" value="<%= note.author %>"><br>
+			<label for="text<%= note._id %>">Text:</label>
+			<textarea class="text" id="text<%= note._id %>" name="text"><%= note.text %></textarea><br>
+			<button type="button" class="submit" onclick="editNote(this)">edit</button>
+			<button type="button" class="submit" onclick="removeNote(this)">delete</button>
+		</div>
+	<% }); %>
+	</div>
+
+	<script src="/events.js" type="text/javascript"></script>
+</body>
+</html>

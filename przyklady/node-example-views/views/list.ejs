@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wakacyjne plany</title>
+  <link href="./style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+  <h1>Lista planów wakacyjnych użytkownika <%=user %> </h1>
+  <form action="/todo" method="POST">
+    <% todolist.forEach(todo => { %>
+      <div>
+        <input type="checkbox" name="activities" id="activity<%= todo.id %>" value="<%= todo.text %>" 
+        <% if(todo.done) { %>
+          <%= "checked" %>
+          <% } %> >
+        <label for="activity<%= todo.id %>"><%= todo.text %></label><br>
+      </div>
+    <% }); %>
+    <input type="submit" value="Zapisz">
+  </form>
+</body>
+</html>

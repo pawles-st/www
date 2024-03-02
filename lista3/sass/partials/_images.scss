@@ -1,0 +1,24 @@
+/* images */
+
+figure {
+	width: fit-content;
+	margin: auto;
+}
+
+img.self-picture {
+	position: absolute;
+	top: 10em;
+	right: 0;
+	float: right;
+	width: 30%;
+}
+
+img {
+	object-fit: fill;
+	width: 95%;
+}
+
+.pc-img {
+	display: none;
+}
+
